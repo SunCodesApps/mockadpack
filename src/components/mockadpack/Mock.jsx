@@ -1,8 +1,7 @@
 import TextInput from "./TextInput";
 import ColorInput from "./ColorInput";
-import FontInput from "./FontInput";
 
-function Mock({ ad, onChange }) {
+function Mock({ ad, onChange, companyFont, setCompanyFont }) {
 
   const updateField = (field, value) => {
     onChange({
@@ -12,7 +11,7 @@ function Mock({ ad, onChange }) {
   };
 
   return (
-    <div className="rounded-lg border border-gray-200 p-4">
+    <div className="rounded-lg border border-gray-200 p-4 shadow-sm">
 
       <TextInput
         id="company"

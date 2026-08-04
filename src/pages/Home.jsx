@@ -6,10 +6,20 @@ import AdPreview from "../components/mockadpack/AdPreview";
 
 import defaultAds from "../data/defaultAds";
 import adFormats from "../config/adFormats";
+import BannerPreview from "../components/mockadpack/previews/BannerPreview";
+import RectanglePreview from "../components/mockadpack/previews/RectanglePreview";
+import SkyscraperPreview from "../components/mockadpack/previews/SkyscraperPreview";
+import MobilePreview from "../components/mockadpack/previews/MobilePreview";
 
 export default function Home() {
   const [ads, setAds] = useState(defaultAds);
-  const [selectedFormats, setSelectedFormats] = useState(["300x250", "728x90"]);
+  const [selectedFormats, setSelectedFormats] = useState(
+    [
+      //"120x240", "300x250", "728x90",
+      "160x600", "120x600", "300x250",
+      //"336x280", "728x90", "970x90", "320x50", "320x100", "468x60"
+    ]
+  );
   const updateAd = (index, updatedAd) => {
     const updatedAds = [...ads];
 
@@ -30,7 +40,7 @@ export default function Home() {
         description: "Crie mockups profissionais para anúncios.",
       }}
     >
-      <section className="py-12">
+      <section className="pt-0 pb-12">
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="mb-6 text-2xl font-bold">MockAdPack Editor</h2>
           <div
@@ -54,9 +64,6 @@ export default function Home() {
             selectedFormats={selectedFormats}
             onChange={setSelectedFormats}
           />
-        </div>
-        <div className="mt-12">
-          <h2 className="mb-6 text-2xl font-bold">Preview</h2>
         </div>
       </section>
       <section className="mt-12">
