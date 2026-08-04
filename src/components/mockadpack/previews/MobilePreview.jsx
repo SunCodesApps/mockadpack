@@ -1,10 +1,13 @@
-function MobilePreview({ ad, format }) {
+import { forwardRef } from "react";
+const MobilePreview = forwardRef(({ ad, format }, ref) => {
   const { fonts, elements } = format;
   const isTallMobile = format.height >= 100;
 
   return (
+    <div className="inline-block shadow-lg shadow-indigo-500/50">
     <div
-      className="overflow-hidden rounded border"
+      className="relative overflow-hidden"
+      ref={ref}
       style={{
         width: format.width,
         height: format.height,
@@ -121,7 +124,8 @@ function MobilePreview({ ad, format }) {
         </div>
       )}
     </div>
+    </div>
   );
-}
+});
 
 export default MobilePreview;

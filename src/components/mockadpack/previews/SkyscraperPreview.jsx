@@ -1,9 +1,12 @@
-function SkyscraperPreview({ ad, format }) {
+import { forwardRef } from "react";
+const SkyscraperPreview = forwardRef(({ ad, format }, ref) => {
   const { fonts, elements } = format;
   const isShort = format.width >= 120;
   return (
+    <div className="inline-block shadow-lg shadow-indigo-500/50">
     <div
-      className="relative overflow-hidden rounded border"
+      className="relative overflow-hidden"
+      ref={ref}
       style={{
         width: format.width,
         height: format.height,
@@ -65,7 +68,8 @@ function SkyscraperPreview({ ad, format }) {
         </div>
       )}
     </div>
+    </div>
   );
-}
+});
 
 export default SkyscraperPreview;

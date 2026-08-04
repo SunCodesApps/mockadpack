@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import BasePage from "../layouts/BasePage";
 import Mock from "../components/mockadpack/Mock";
 import FormatSelector from "../components/mockadpack/FormatSelector";
@@ -10,16 +10,20 @@ import BannerPreview from "../components/mockadpack/previews/BannerPreview";
 import RectanglePreview from "../components/mockadpack/previews/RectanglePreview";
 import SkyscraperPreview from "../components/mockadpack/previews/SkyscraperPreview";
 import MobilePreview from "../components/mockadpack/previews/MobilePreview";
+import {
+  downloadAllCompaniesPack,
+  downloadCompanyPack,
+} from "../utils/downloadPack";
 
 export default function Home() {
   const [ads, setAds] = useState(defaultAds);
-  const [selectedFormats, setSelectedFormats] = useState(
-    [
-      //"120x240", "300x250", "728x90",
-      "160x600", "120x600", "300x250",
-      //"336x280", "728x90", "970x90", "320x50", "320x100", "468x60"
-    ]
-  );
+  const [selectedFormats, setSelectedFormats] = useState([
+    //"120x240", "300x250", "728x90",
+    "160x600",
+    "120x600",
+    "300x250",
+    //"336x280", "728x90", "970x90", "320x50", "320x100", "468x60"
+  ]);
   const updateAd = (index, updatedAd) => {
     const updatedAds = [...ads];
 
@@ -27,6 +31,7 @@ export default function Home() {
 
     setAds(updatedAds);
   };
+  const previewRefs = useRef({});
 
   return (
     <BasePage
@@ -40,7 +45,7 @@ export default function Home() {
         description: "Crie mockups profissionais para anúncios.",
       }}
     >
-      <section className="pt-0 pb-12">
+      <section className="pt-0 pb-6">
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="mb-6 text-2xl font-bold">MockAdPack Editor</h2>
           <div
@@ -66,9 +71,20 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="mt-12">
+      <section className="mt-6">
         <h2 className="mb-6 text-2xl font-bold">Preview</h2>
-
+        <button
+          className="mb-6 rounded bg-black px-5 py-2 text-white"
+          onClick={() =>
+            downloadAllCompaniesPack(
+              ads,
+              selectedFormats.map((id) => adFormats[id]),
+              previewRefs,
+            )
+          }
+        >
+          Download All Companies
+        </button>
         <div className="space-y-10">
           {ads.map((ad, adIndex) => (
             <div key={adIndex}>
@@ -80,9 +96,25 @@ export default function Home() {
                     key={`${adIndex}-${formatId}`}
                     ad={ad}
                     format={adFormats[formatId]}
+                    previewRef={(el) =>
+                      (previewRefs.current[`${adIndex}-${formatId}`] = el)
+                    }
                   />
                 ))}
               </div>
+              <button
+                className="my-3 rounded bg-black px-4 py-2 text-white"
+                onClick={() =>
+                  downloadCompanyPack(
+                    ad,
+                    selectedFormats.map((id) => adFormats[id]),
+                    adIndex,
+                    previewRefs,
+                  )
+                }
+              >
+                Download {ad.company} Pack
+              </button>
             </div>
           ))}
         </div>

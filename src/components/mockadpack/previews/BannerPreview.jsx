@@ -1,9 +1,12 @@
-function BannerPreview({ ad, format }) {
+import { forwardRef } from "react";
+const BannerPreview = forwardRef(({ ad, format }, ref) => {
   const { elements, fonts } = format;
   const isLongBanner = format.width >= 600;
   return (
+    <div className="inline-block shadow-lg shadow-indigo-500/50">
     <div
-      className="overflow-hidden rounded border"
+      className="relative overflow-hidden"
+      ref={ref}
       style={{
         width: format.width,
         height: format.height,
@@ -44,6 +47,7 @@ function BannerPreview({ ad, format }) {
         >
           {format.id}
         </div>
+      </div>
         <button
           className="ml-3 shrink-0 rounded font-medium"
           style={{
@@ -57,9 +61,9 @@ function BannerPreview({ ad, format }) {
         >
           {ad.button_text}
         </button>
-      </div>
+    </div>
     </div>
   );
-}
+});
 
 export default BannerPreview;

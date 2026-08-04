@@ -1,9 +1,12 @@
-function RectanglePreview({ ad, format }) {
+import { forwardRef } from "react";
+const RectanglePreview = forwardRef(({ ad, format }, ref) => {
   const { fonts, elements } = format;
   const isTallRectangle = format.height >= 300;
   return (
+    <div className="inline-block shadow-lg shadow-indigo-500/50">
     <div
-      className={`relative overflow-hidden rounded border`}
+      className="relative overflow-hidden"
+      ref={ref}
       style={{
         width: format.width,
         height: format.height,
@@ -64,7 +67,8 @@ function RectanglePreview({ ad, format }) {
         </div>
       )}
     </div>
+    </div>
   );
-}
+});
 
 export default RectanglePreview;
