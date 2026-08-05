@@ -10,7 +10,7 @@ import { HelmetProvider } from "react-helmet-async";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/mockadpack">
         <App />
       </BrowserRouter>
     </HelmetProvider>
