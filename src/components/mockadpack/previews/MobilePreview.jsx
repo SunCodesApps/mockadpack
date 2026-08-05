@@ -4,7 +4,9 @@ const MobilePreview = forwardRef(({ ad, format }, ref) => {
   const isTallMobile = format.height >= 100;
 
   return (
-    <div className="inline-block shadow-lg shadow-indigo-500/50">
+    <div className="inline-block" style={{
+      boxShadow: `0 10px 15px -3px ${ad.bg_color}99, 0 4px 6px -4px ${ad.bg_color}99`
+    }}>
       <div
         className="relative overflow-hidden"
         ref={ref}

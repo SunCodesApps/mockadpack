@@ -3,7 +3,9 @@ const SkyscraperPreview = forwardRef(({ ad, format }, ref) => {
   const { fonts, elements } = format;
   const isShort = format.width >= 120;
   return (
-    <div className="inline-block shadow-lg shadow-indigo-500/50">
+    <div className="inline-block" style={{
+      boxShadow: `0 10px 15px -3px ${ad.bg_color}99, 0 4px 6px -4px ${ad.bg_color}99`
+    }}>
       <div
         className="relative overflow-hidden"
         ref={ref}
