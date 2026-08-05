@@ -63,7 +63,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* MockAdPack Editor */}
       <section className="p-10">
         <div className="mx-auto max-w-7xl px-4">

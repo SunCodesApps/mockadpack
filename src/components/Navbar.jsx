@@ -7,7 +7,18 @@ export default function Navbar() {
     <nav className="border-b bg-black text-gray-100">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2 text-xl font-bold">
-          <FontAwesomeIcon icon={faBoxOpen} />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64">
+            <g transform="translate(45, 42) rotate(45) skewX(-20) scale(1, 0.6)">
+              <rect x="0" y="0" width="55" height="48" rx="3" fill="#EAB308"/>
+            </g>
+            <g transform="translate(45, 25) rotate(45) skewX(-20) scale(1, 0.6)">
+              <rect x="0" y="0" width="55" height="48" rx="3" fill="#F97316"/>
+            </g>
+            <g transform="translate(45, 8) rotate(45) skewX(-20) scale(1, 0.6)">
+              <rect x="0" y="0" width="55" height="48" rx="3" fill="#2563EB"/>
+              <rect x="3" y="3" width="39" height="34" rx="2" fill="rgba(255,255,255,0.18)"/>
+            </g> 
+          </svg>
           MockAdPack
         </Link>
 
