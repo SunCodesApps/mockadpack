@@ -1,19 +1,9 @@
 import Label from "./Label";
 
-function FontInput({
-  id,
-  label,
-  family,
-  size,
-  onFamilyChange,
-  onSizeChange,
-}) {
+function FontInput({ id, label, family, size, onFamilyChange, onSizeChange }) {
   return (
     <div className="mb-4">
-
-      <Label htmlFor={`${id}-family`}>
-        {label} Font Family
-      </Label>
+      <Label htmlFor={`${id}-family`}>{label} Font Family</Label>
 
       <select
         id={`${id}-family`}
@@ -27,10 +17,7 @@ function FontInput({
         <option value="Roboto">Roboto</option>
       </select>
 
-
-      <Label htmlFor={`${id}-size`}>
-        {label} Font Size
-      </Label>
+      <Label htmlFor={`${id}-size`}>{label} Font Size</Label>
 
       <input
         id={`${id}-size`}
@@ -39,7 +26,6 @@ function FontInput({
         onChange={onSizeChange}
         className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-black focus:outline-none"
       />
-
     </div>
   );
 }

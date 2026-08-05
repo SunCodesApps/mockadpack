@@ -14,33 +14,27 @@ export default function BasePage({
   type = "website",
   structuredData,
   extraHead,
-  children
+  children,
 }) {
   return (
     <>
       <Helmet>
         {title && <title>{title} | MockAdPack</title>}
 
-        {description && (
-          <meta name="description" content={description} />
-        )}
+        {description && <meta name="description" content={description} />}
 
         <meta name="robots" content={robots} />
 
         <meta property="og:site_name" content="MockAdPack" />
         <meta property="og:type" content={type} />
 
-        {title && (
-          <meta property="og:title" content={title} />
-        )}
+        {title && <meta property="og:title" content={title} />}
 
         {description && (
           <meta property="og:description" content={description} />
         )}
 
-        {image && (
-          <meta property="og:image" content={image} />
-        )}
+        {image && <meta property="og:image" content={image} />}
 
         {canonical && (
           <>
@@ -51,17 +45,13 @@ export default function BasePage({
 
         <meta name="twitter:card" content="summary_large_image" />
 
-        {title && (
-          <meta name="twitter:title" content={title} />
-        )}
+        {title && <meta name="twitter:title" content={title} />}
 
         {description && (
           <meta name="twitter:description" content={description} />
         )}
 
-        {image && (
-          <meta name="twitter:image" content={image} />
-        )}
+        {image && <meta name="twitter:image" content={image} />}
 
         <meta name="author" content="MockAdPack" />
         <meta name="theme-color" content="#000000" />
@@ -77,9 +67,7 @@ export default function BasePage({
 
       <Navbar />
 
-      <Container>
-        { children }
-      </Container>
+      <Container>{children}</Container>
 
       <Footer />
     </>

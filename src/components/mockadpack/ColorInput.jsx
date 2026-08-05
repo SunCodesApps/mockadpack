@@ -3,9 +3,7 @@ import Label from "./Label";
 function ColorInput({ id, label, value, onChange }) {
   return (
     <div className="mb-4">
-      <Label htmlFor={id}>
-        {label}
-      </Label>
+      <Label htmlFor={id}>{label}</Label>
 
       <div className="flex items-center gap-3">
         <input

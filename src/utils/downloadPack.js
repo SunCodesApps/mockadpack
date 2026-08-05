@@ -1,17 +1,11 @@
 import { toPng } from "html-to-image";
 import JSZip from "jszip";
 
-export async function downloadCompanyPack(
-  ad,
-  formats,
-  adIndex,
-  previewRefs
-) {
+export async function downloadCompanyPack(ad, formats, adIndex, previewRefs) {
   const zip = new JSZip();
 
   for (const format of formats) {
-    const element =
-      previewRefs.current[`${adIndex}-${format.id}`];
+    const element = previewRefs.current[`${adIndex}-${format.id}`];
 
     if (!element) continue;
 
@@ -19,11 +13,7 @@ export async function downloadCompanyPack(
 
     const base64 = dataUrl.split(",")[1];
 
-    zip.file(
-      `${ad.company}-${format.id}.png`,
-      base64,
-      { base64: true }
-    );
+    zip.file(`${ad.company}-${format.id}.png`, base64, { base64: true });
   }
 
   const blob = await zip.generateAsync({
@@ -36,11 +26,7 @@ export async function downloadCompanyPack(
   link.click();
 }
 
-export async function downloadAllCompaniesPack(
-  ads,
-  formats,
-  previewRefs
-) {
+export async function downloadAllCompaniesPack(ads, formats, previewRefs) {
   const zip = new JSZip();
 
   for (let adIndex = 0; adIndex < ads.length; adIndex++) {
@@ -48,19 +34,14 @@ export async function downloadAllCompaniesPack(
     const folder = zip.folder(ad.company);
 
     for (const format of formats) {
-      const element =
-        previewRefs.current[`${adIndex}-${format.id}`];
+      const element = previewRefs.current[`${adIndex}-${format.id}`];
 
       if (!element) continue;
 
       const dataUrl = await toPng(element);
       const base64 = dataUrl.split(",")[1];
 
-      folder.file(
-        `${format.id}.png`,
-        base64,
-        { base64: true }
-      );
+      folder.file(`${format.id}.png`, base64, { base64: true });
     }
   }
 

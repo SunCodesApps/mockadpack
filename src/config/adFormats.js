@@ -1,359 +1,359 @@
 const adFormats = {
-    // FORMATOS ORIGINAIS
-    "160x600": {
-        "id": "160x600",
-        "orientation": "vertical",
-        "family": "skyscraper",
-        "width": 160,
-        "height": 600,
-        "platforms": ["google"],
-        "fonts": {
-            "company": 28,
-            "category": 16,
-            "button": 12,
-            "website": 14
-        },
-        "elements": {
-            "company_y": 120,
-            "category_y": 240,
-            "button_y": 360,
-            "website_y": 550,
-            "button_width": 100,
-            "button_height": 35
-        }
+  // FORMATOS ORIGINAIS
+  "160x600": {
+    id: "160x600",
+    orientation: "vertical",
+    family: "skyscraper",
+    width: 160,
+    height: 600,
+    platforms: ["google"],
+    fonts: {
+      company: 28,
+      category: 16,
+      button: 12,
+      website: 14,
     },
-    "120x600": {
-        "id": "120x600",
-        "orientation": "vertical",
-        "family": "skyscraper",
-        "width": 120,
-        "height": 600,
-        "platforms": ["google"],
-        "fonts": {
-            "company": 24,
-            "category": 16,
-            "button": 12,
-            "website": 12
-        },
-        "elements": {
-            "company_y": 120,
-            "category_y": 240,
-            "button_y": 360,
-            "website_y": 550,
-            "button_width": 100,
-            "button_height": 35
-        }
+    elements: {
+      company_y: 120,
+      category_y: 240,
+      button_y: 360,
+      website_y: 550,
+      button_width: 100,
+      button_height: 35,
     },
-    "120x240": {
-        "id": "120x240",
-        "orientation": "vertical",
-        "family": "skyscraper",
-        "width": 120,
-        "height": 240,
-        "platforms": ["google"],
-        "fonts": {
-            "company": 20,
-            "category": 12,
-            "button": 12,
-            "website": 10
-        },
-        "elements": {
-            "company_y": 50,
-            "category_y": 100,
-            "button_y": 145,
-            "website_y": 205,
-            "button_width": 80,
-            "button_height": 28
-        }
+  },
+  "120x600": {
+    id: "120x600",
+    orientation: "vertical",
+    family: "skyscraper",
+    width: 120,
+    height: 600,
+    platforms: ["google"],
+    fonts: {
+      company: 24,
+      category: 16,
+      button: 12,
+      website: 12,
     },
-    "300x250": {
-        "id": "300x250",
-        "orientation": "rectangle",
-        "family": "rectangle",
-        "width": 300,
-        "height": 250,
-        "platforms": ["google", "facebook", "instagram", "youtube"],
-        "fonts": {
-            "company": 28,
-            "category": 16,
-            "button": 12,
-            "website": 14
-        },
-        "elements": {
-            "company_y": 40,
-            "category_y": 90,
-            "button_y": 140,
-            "website_y": 225,
-            "button_width": 110,
-            "button_height": 35
-        }
+    elements: {
+      company_y: 120,
+      category_y: 240,
+      button_y: 360,
+      website_y: 550,
+      button_width: 100,
+      button_height: 35,
     },
-    "336x280": {
-        "id": "336x280",
-        "orientation": "rectangle",
-        "family": "rectangle",
-        "width": 336,
-        "height": 280,
-        "platforms": ["google", "facebook", "instagram", "youtube"],
-        "fonts": {
-            "company": 28,
-            "category": 16,
-            "button": 12,
-            "website": 14
-        },
-        "elements": {
-            "company_y": 45,
-            "category_y": 100,
-            "button_y": 170,
-            "website_y": 255,
-            "button_width": 110,
-            "button_height": 35
-        }
+  },
+  "120x240": {
+    id: "120x240",
+    orientation: "vertical",
+    family: "skyscraper",
+    width: 120,
+    height: 240,
+    platforms: ["google"],
+    fonts: {
+      company: 20,
+      category: 12,
+      button: 12,
+      website: 10,
     },
-    "728x90": {
-        "id": "728x90",
-        "orientation": "horizontal",
-        "family": "banner",
-        "width": 728,
-        "height": 90,
-        "platforms": ["google", "youtube"],
-        "fonts": {
-            "company": 24,
-            "category": 14,
-            "button": 12,
-            "website": 14
-        },
-        "elements": {
-            "company_y": 12,
-            "category_y": 42,
-            "button_y": 27,
-            "website_y": 74,
-            "button_width": 120,
-            "button_height": 35
-        }
+    elements: {
+      company_y: 50,
+      category_y: 100,
+      button_y: 145,
+      website_y: 205,
+      button_width: 80,
+      button_height: 28,
     },
-    "970x90": {
-        "id": "970x90",
-        "orientation": "horizontal",
-        "family": "banner",
-        "width": 970,
-        "height": 90,
-        "platforms": ["google", "youtube"],
-        "fonts": {
-            "company": 24,
-            "category": 16,
-            "button": 12,
-            "website": 16
-        },
-        "elements": {
-            "company_y": 12,
-            "category_y": 42,
-            "button_y": 27,
-            "website_y": 74,
-            "button_width": 120,
-            "button_height": 35
-        }
+  },
+  "300x250": {
+    id: "300x250",
+    orientation: "rectangle",
+    family: "rectangle",
+    width: 300,
+    height: 250,
+    platforms: ["google", "facebook", "instagram", "youtube"],
+    fonts: {
+      company: 28,
+      category: 16,
+      button: 12,
+      website: 14,
     },
-    "320x50": {
-        "id": "320x50",
-        "orientation": "horizontal",
-        "family": "mobile",
-        "width": 320,
-        "height": 50,
-        "platforms": ["google"],
-        "fonts": {
-            "company": 18,
-            "category": 12,
-            "button": 9,
-            "website": 0
-        },
-        "elements": {
-            "company_y": 5,
-            "category_y": 25,
-            "button_y": 10,
-            "website_y": 0,
-            "button_width": 80,
-            "button_height": 24
-        }
+    elements: {
+      company_y: 40,
+      category_y: 90,
+      button_y: 140,
+      website_y: 225,
+      button_width: 110,
+      button_height: 35,
     },
+  },
+  "336x280": {
+    id: "336x280",
+    orientation: "rectangle",
+    family: "rectangle",
+    width: 336,
+    height: 280,
+    platforms: ["google", "facebook", "instagram", "youtube"],
+    fonts: {
+      company: 28,
+      category: 16,
+      button: 12,
+      website: 14,
+    },
+    elements: {
+      company_y: 45,
+      category_y: 100,
+      button_y: 170,
+      website_y: 255,
+      button_width: 110,
+      button_height: 35,
+    },
+  },
+  "728x90": {
+    id: "728x90",
+    orientation: "horizontal",
+    family: "banner",
+    width: 728,
+    height: 90,
+    platforms: ["google", "youtube"],
+    fonts: {
+      company: 24,
+      category: 14,
+      button: 12,
+      website: 14,
+    },
+    elements: {
+      company_y: 12,
+      category_y: 42,
+      button_y: 27,
+      website_y: 74,
+      button_width: 120,
+      button_height: 35,
+    },
+  },
+  "970x90": {
+    id: "970x90",
+    orientation: "horizontal",
+    family: "banner",
+    width: 970,
+    height: 90,
+    platforms: ["google", "youtube"],
+    fonts: {
+      company: 24,
+      category: 16,
+      button: 12,
+      website: 16,
+    },
+    elements: {
+      company_y: 12,
+      category_y: 42,
+      button_y: 27,
+      website_y: 74,
+      button_width: 120,
+      button_height: 35,
+    },
+  },
+  "320x50": {
+    id: "320x50",
+    orientation: "horizontal",
+    family: "mobile",
+    width: 320,
+    height: 50,
+    platforms: ["google"],
+    fonts: {
+      company: 18,
+      category: 12,
+      button: 9,
+      website: 0,
+    },
+    elements: {
+      company_y: 5,
+      category_y: 25,
+      button_y: 10,
+      website_y: 0,
+      button_width: 80,
+      button_height: 24,
+    },
+  },
 
-    // NOVOS FORMATOS ADICIONADOS
-    "1200x628": {
-        "id": "1200x628",
-        "orientation": "horizontal",
-        "family": "rectangle",
-        "width": 1200,
-        "height": 628,
-        "platforms": ["facebook", "instagram"],
-        "fonts": {
-            "company": 36,
-            "category": 20,
-            "button": 22,
-            "website": 16
-        },
-        "elements": {
-            "company_y": 80,
-            "category_y": 160,
-            "button_y": 250,
-            "website_y": 570,
-            "button_width": 200,
-            "button_height": 50
-        }
+  // NOVOS FORMATOS ADICIONADOS
+  "1200x628": {
+    id: "1200x628",
+    orientation: "horizontal",
+    family: "rectangle",
+    width: 1200,
+    height: 628,
+    platforms: ["facebook", "instagram"],
+    fonts: {
+      company: 36,
+      category: 20,
+      button: 22,
+      website: 16,
     },
-    "1080x1080": {
-        "id": "1080x1080",
-        "orientation": "square",
-        "family": "square",
-        "width": 1080,
-        "height": 1080,
-        "platforms": ["facebook", "instagram"],
-        "fonts": {
-            "company": 40,
-            "category": 22,
-            "button": 18,
-            "website": 14
-        },
-        "elements": {
-            "company_y": 150,
-            "category_y": 300,
-            "button_y": 450,
-            "website_y": 1000,
-            "button_width": 220,
-            "button_height": 55
-        }
+    elements: {
+      company_y: 80,
+      category_y: 160,
+      button_y: 250,
+      website_y: 570,
+      button_width: 200,
+      button_height: 50,
     },
-    // "1080x1920": {
-    //     "id": "1080x1920",
-    //     "orientation": "vertical",
-    //     "family": "social",
-    //     "width": 1080,
-    //     "height": 1920,
-    //     "platforms": ["facebook", "instagram"],
-    //     "fonts": {
-    //         "company": 48,
-    //         "category": 26,
-    //         "button": 20,
-    //         "website": 16
-    //     },
-    //     "elements": {
-    //         "company_y": 300,
-    //         "category_y": 500,
-    //         "button_y": 700,
-    //         "website_y": 1800,
-    //         "button_width": 240,
-    //         "button_height": 60
-    //     }
-    // },
-    "820x312": {
-        "id": "820x312",
-        "orientation": "horizontal",
-        "family": "banner",
-        "width": 820,
-        "height": 312,
-        "platforms": ["facebook"],
-        "fonts": {
-            "company": 36,
-            "category": 24,
-            "button": 14,
-            "website": 18
-        },
-        "elements": {
-            "company_y": 45,
-            "category_y": 90,
-            "button_y": 160,
-            "website_y": 280,
-            "button_width": 150,
-            "button_height": 40
-        }
+  },
+  "1080x1080": {
+    id: "1080x1080",
+    orientation: "square",
+    family: "square",
+    width: 1080,
+    height: 1080,
+    platforms: ["facebook", "instagram"],
+    fonts: {
+      company: 40,
+      category: 22,
+      button: 18,
+      website: 14,
     },
-    "300x60": {
-        "id": "300x60",
-        "orientation": "horizontal",
-        "family": "mobile",
-        "width": 300,
-        "height": 60,
-        "platforms": ["youtube"],
-        "fonts": {
-            "company": 14,
-            "category": 12,
-            "button": 10,
-            "website": 0
-        },
-        "elements": {
-            "company_y": 8,
-            "category_y": 28,
-            "button_y": 15,
-            "website_y": 50,
-            "button_width": 80,
-            "button_height": 25
-        }
+    elements: {
+      company_y: 150,
+      category_y: 300,
+      button_y: 450,
+      website_y: 1000,
+      button_width: 220,
+      button_height: 55,
     },
-    "480x70": {
-        "id": "480x70",
-        "orientation": "horizontal",
-        "family": "banner",
-        "width": 480,
-        "height": 70,
-        "platforms": ["youtube"],
-        "fonts": {
-            "company": 20,
-            "category": 12,
-            "button": 12,
-            "website": 12
-        },
-        "elements": {
-            "company_y": 10,
-            "category_y": 32,
-            "button_y": 20,
-            "website_y": 60,
-            "button_width": 100,
-            "button_height": 30
-        }
+  },
+  // "1080x1920": {
+  //     "id": "1080x1920",
+  //     "orientation": "vertical",
+  //     "family": "social",
+  //     "width": 1080,
+  //     "height": 1920,
+  //     "platforms": ["facebook", "instagram"],
+  //     "fonts": {
+  //         "company": 48,
+  //         "category": 26,
+  //         "button": 20,
+  //         "website": 16
+  //     },
+  //     "elements": {
+  //         "company_y": 300,
+  //         "category_y": 500,
+  //         "button_y": 700,
+  //         "website_y": 1800,
+  //         "button_width": 240,
+  //         "button_height": 60
+  //     }
+  // },
+  "820x312": {
+    id: "820x312",
+    orientation: "horizontal",
+    family: "banner",
+    width: 820,
+    height: 312,
+    platforms: ["facebook"],
+    fonts: {
+      company: 36,
+      category: 24,
+      button: 14,
+      website: 18,
     },
-    "320x100": {
-        "id": "320x100",
-        "orientation": "horizontal",
-        "family": "mobile",
-        "width": 320,
-        "height": 100,
-        "platforms": ["google"],
-        "fonts": {
-            "company": 22,
-            "category": 12,
-            "button": 12,
-            "website": 12
-        },
-        "elements": {
-            "company_y": 12,
-            "category_y": 40,
-            "button_y": 30,
-            "website_y": 85,
-            "button_width": 100,
-            "button_height": 32
-        }
+    elements: {
+      company_y: 45,
+      category_y: 90,
+      button_y: 160,
+      website_y: 280,
+      button_width: 150,
+      button_height: 40,
     },
-    "468x60": {
-        "id": "468x60",
-        "orientation": "horizontal",
-        "family": "banner",
-        "width": 468,
-        "height": 60,
-        "platforms": ["google"],
-        "fonts": {
-            "company": 20,
-            "category": 12,
-            "button": 11,
-            "website": 14
-        },
-        "elements": {
-            "company_y": 8,
-            "category_y": 28,
-            "button_y": 18,
-            "website_y": 50,
-            "button_width": 100,
-            "button_height": 28
-        }
-    }
+  },
+  "300x60": {
+    id: "300x60",
+    orientation: "horizontal",
+    family: "mobile",
+    width: 300,
+    height: 60,
+    platforms: ["youtube"],
+    fonts: {
+      company: 14,
+      category: 12,
+      button: 10,
+      website: 0,
+    },
+    elements: {
+      company_y: 8,
+      category_y: 28,
+      button_y: 15,
+      website_y: 50,
+      button_width: 80,
+      button_height: 25,
+    },
+  },
+  "480x70": {
+    id: "480x70",
+    orientation: "horizontal",
+    family: "banner",
+    width: 480,
+    height: 70,
+    platforms: ["youtube"],
+    fonts: {
+      company: 20,
+      category: 12,
+      button: 12,
+      website: 12,
+    },
+    elements: {
+      company_y: 10,
+      category_y: 32,
+      button_y: 20,
+      website_y: 60,
+      button_width: 100,
+      button_height: 30,
+    },
+  },
+  "320x100": {
+    id: "320x100",
+    orientation: "horizontal",
+    family: "mobile",
+    width: 320,
+    height: 100,
+    platforms: ["google"],
+    fonts: {
+      company: 22,
+      category: 12,
+      button: 12,
+      website: 12,
+    },
+    elements: {
+      company_y: 12,
+      category_y: 40,
+      button_y: 30,
+      website_y: 85,
+      button_width: 100,
+      button_height: 32,
+    },
+  },
+  "468x60": {
+    id: "468x60",
+    orientation: "horizontal",
+    family: "banner",
+    width: 468,
+    height: 60,
+    platforms: ["google"],
+    fonts: {
+      company: 20,
+      category: 12,
+      button: 11,
+      website: 14,
+    },
+    elements: {
+      company_y: 8,
+      category_y: 28,
+      button_y: 18,
+      website_y: 50,
+      button_width: 100,
+      button_height: 28,
+    },
+  },
 };
 
 export default adFormats;

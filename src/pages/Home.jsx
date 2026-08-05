@@ -48,7 +48,7 @@ export default function Home() {
           "Free ad mockup generator for creating and exporting advertising creatives for Google Ads, social media, display banners, and multiple advertising platforms.",
         applicationCategory: "DesignApplication",
         operatingSystem: "Web",
-        url: "https://suncodesapps.github.io/mockadpack/"
+        url: "https://suncodesapps.github.io/mockadpack/",
       }}
     >
       {/* hero section */}
@@ -122,37 +122,37 @@ export default function Home() {
             <div className="space-y-10">
               {ads.map((ad, adIndex) => (
                 <React.Fragment key={adIndex}>
-                    <div className="flex flex-row  items-center gap-4">
-                      <h3 className="text-lg font-semibold">
-                        {ad.company} Company
-                      </h3>
-                      <button
-                        className="my-3 rounded bg-black text-sm px-3 py-2 text-white"
-                        onClick={() =>
-                          downloadCompanyPack(
-                            ad,
-                            selectedFormats.map((id) => adFormats[id]),
-                            adIndex,
-                            previewRefs,
-                          )
+                  <div className="flex flex-row  items-center gap-4">
+                    <h3 className="text-lg font-semibold">
+                      {ad.company} Company
+                    </h3>
+                    <button
+                      className="my-3 rounded bg-black text-sm px-3 py-2 text-white"
+                      onClick={() =>
+                        downloadCompanyPack(
+                          ad,
+                          selectedFormats.map((id) => adFormats[id]),
+                          adIndex,
+                          previewRefs,
+                        )
+                      }
+                    >
+                      <FontAwesomeIcon icon={faDownload} />
+                      <span className="mx-2">Download {ad.company} Pack</span>
+                    </button>
+                  </div>
+                  <div className="flex flex-wrap gap-6">
+                    {selectedFormats.map((formatId) => (
+                      <AdPreview
+                        key={`${adIndex}-${formatId}`}
+                        ad={ad}
+                        format={adFormats[formatId]}
+                        previewRef={(el) =>
+                          (previewRefs.current[`${adIndex}-${formatId}`] = el)
                         }
-                      >
-                        <FontAwesomeIcon icon={faDownload} />
-                        <span className="mx-2">Download {ad.company} Pack</span>
-                      </button>
-                    </div>
-                    <div className="flex flex-wrap gap-6">
-                      {selectedFormats.map((formatId) => (
-                        <AdPreview
-                          key={`${adIndex}-${formatId}`}
-                          ad={ad}
-                          format={adFormats[formatId]}
-                          previewRef={(el) =>
-                            (previewRefs.current[`${adIndex}-${formatId}`] = el)
-                          }
-                        />
-                      ))}
-                    </div>
+                      />
+                    ))}
+                  </div>
                   <hr />
                 </React.Fragment>
               ))}

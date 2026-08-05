@@ -22,7 +22,7 @@ function AdPreview({ ad, format, previewRef }) {
   }
 
   const filename = `${sanitizeFilename(ad.company)}-${sanitizeFilename(ad.category)}-${format.id}`;
-  
+
   const renderPreview = () => {
     switch (format.family) {
       case "banner":

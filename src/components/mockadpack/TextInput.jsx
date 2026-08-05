@@ -3,9 +3,7 @@ import Label from "./Label";
 function TextInput({ id, label, value, onChange, placeholder = "" }) {
   return (
     <div className="mb-4">
-      <Label htmlFor={id}>
-        {label}
-      </Label>
+      <Label htmlFor={id}>{label}</Label>
 
       <input
         id={id}
