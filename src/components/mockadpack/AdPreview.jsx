@@ -4,6 +4,7 @@ import RectanglePreview from "./previews/RectanglePreview";
 import SkyscraperPreview from "./previews/SkyscraperPreview";
 import MobilePreview from "./previews/MobilePreview";
 import { downloadAd } from "../../utils/downloadAd";
+import SquarePreview from "./previews/SquarePreview";
 
 function AdPreview({ ad, format, previewRef }) {
   const localRef = useRef();
@@ -33,6 +34,9 @@ function AdPreview({ ad, format, previewRef }) {
 
       case "skyscraper":
         return <SkyscraperPreview ref={setRef} ad={ad} format={format} />;
+      
+      case "square":
+        return <SquarePreview ref={setRef} ad={ad} format={format} />;
 
       case "mobile":
         return <MobilePreview ref={setRef} ad={ad} format={format} />;

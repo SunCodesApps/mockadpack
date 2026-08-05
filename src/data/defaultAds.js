@@ -21,7 +21,7 @@ const defaultAds = [
   },
   {
     company: "Gamma",
-    category: "Cardiology",
+    category: "Engineering",
     website: "mockadpack",
     bg_color: "#EAB308",
     text_color: "#FFFFFF",

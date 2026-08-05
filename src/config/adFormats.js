@@ -211,7 +211,7 @@ const adFormats = {
       company: 40,
       category: 22,
       button: 18,
-      website: 14,
+      website: 26,
     },
     elements: {
       company_y: 150,
