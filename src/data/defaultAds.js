@@ -2,7 +2,7 @@ const defaultAds = [
   {
     company: "Alfa",
     category: "Education",
-    website: "www.mockadpack.com",
+    website: "mockadpack",
     bg_color: "#1565C0",
     text_color: "#FFFFFF",
     button_color: "#FFFFFF",
@@ -12,7 +12,7 @@ const defaultAds = [
   {
     company: "Beta",
     category: "Real Estate",
-    website: "www.mockadpack.com",
+    website: "mockadpack",
     bg_color: "#2E7D32",
     text_color: "#FFFFFF",
     button_color: "#FFFFFF",
@@ -22,7 +22,7 @@ const defaultAds = [
   {
     company: "Gamma",
     category: "Cardiology",
-    website: "www.mockadpack.com",
+    website: "mockadpack",
     bg_color: "#C62828",
     text_color: "#FFFFFF",
     button_color: "#FFFFFF",
@@ -32,7 +32,7 @@ const defaultAds = [
   {
     company: "Delta",
     category: "Automotive",
-    website: "www.mockadpack.com",
+    website: "mockadpack",
     bg_color: "#263238",
     text_color: "#FFFFFF",
     button_color: "#FFFFFF",
@@ -40,9 +40,9 @@ const defaultAds = [
     button_text: "Learn More",
   },
   {
-    company: "Épsilon",
+    company: "Zetta",
     category: "Medicine",
-    website: "www.mockadpack.com",
+    website: "mockadpack",
     bg_color: "#6A1B9A",
     text_color: "#FFFFFF",
     button_color: "#FFFFFF",

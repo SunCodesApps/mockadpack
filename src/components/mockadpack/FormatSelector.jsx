@@ -7,13 +7,13 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
+
 function FormatSelector({ selectedFormats, onChange }) {
   const platformIcons = {
     google: faGoogle,
     facebook: faFacebook,
     instagram: faInstagram,
     youtube: faYoutube,
-    programmatic: "⚫",
   };
   const toggleFormat = (id) => {
     if (selectedFormats.includes(id)) {
@@ -29,16 +29,20 @@ function FormatSelector({ selectedFormats, onChange }) {
       ]);
     }
   };
+  const sortedFormats = Object.fromEntries(
+  Object.entries(adFormats)
+    .sort(([, a], [, b]) => a.width - b.width)
+);
 
   return (
-    <div className="mb-6">
+    <div className="my-6">
 
       <h3 className="mb-3 text-lg font-semibold">
         Ad Formats
       </h3>
 
       <div className="flex flex-wrap gap-4">
-  {Object.values(adFormats).map((format) => (
+  {Object.values(sortedFormats).map((format) => (
     <label
       key={format.id}
       className="flex flex-col items-center gap-2 border border-gray-300 shadow-sm rounded p-3 cursor-pointer"

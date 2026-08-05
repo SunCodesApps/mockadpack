@@ -6,7 +6,7 @@ const adFormats = {
         "family": "skyscraper",
         "width": 160,
         "height": 600,
-        "platforms": ["google", "programmatic"],
+        "platforms": ["google"],
         "fonts": {
             "company": 28,
             "category": 16,
@@ -28,7 +28,7 @@ const adFormats = {
         "family": "skyscraper",
         "width": 120,
         "height": 600,
-        "platforms": ["google", "programmatic"],
+        "platforms": ["google"],
         "fonts": {
             "company": 24,
             "category": 16,
@@ -50,18 +50,18 @@ const adFormats = {
         "family": "skyscraper",
         "width": 120,
         "height": 240,
-        "platforms": ["google", "programmatic"],
+        "platforms": ["google"],
         "fonts": {
             "company": 20,
             "category": 12,
-            "button": 10,
+            "button": 12,
             "website": 10
         },
         "elements": {
-            "company_y": 35,
-            "category_y": 90,
+            "company_y": 50,
+            "category_y": 100,
             "button_y": 145,
-            "website_y": 210,
+            "website_y": 205,
             "button_width": 80,
             "button_height": 28
         }
@@ -72,7 +72,7 @@ const adFormats = {
         "family": "rectangle",
         "width": 300,
         "height": 250,
-        "platforms": ["google", "facebook", "instagram", "youtube", "programmatic"],
+        "platforms": ["google", "facebook", "instagram", "youtube"],
         "fonts": {
             "company": 28,
             "category": 16,
@@ -94,7 +94,7 @@ const adFormats = {
         "family": "rectangle",
         "width": 336,
         "height": 280,
-        "platforms": ["google", "facebook", "instagram", "youtube", "programmatic"],
+        "platforms": ["google", "facebook", "instagram", "youtube"],
         "fonts": {
             "company": 28,
             "category": 16,
@@ -116,7 +116,7 @@ const adFormats = {
         "family": "banner",
         "width": 728,
         "height": 90,
-        "platforms": ["google", "youtube", "programmatic"],
+        "platforms": ["google", "youtube"],
         "fonts": {
             "company": 24,
             "category": 14,
@@ -138,7 +138,7 @@ const adFormats = {
         "family": "banner",
         "width": 970,
         "height": 90,
-        "platforms": ["google", "youtube", "programmatic"],
+        "platforms": ["google", "youtube"],
         "fonts": {
             "company": 24,
             "category": 16,
@@ -160,7 +160,7 @@ const adFormats = {
         "family": "mobile",
         "width": 320,
         "height": 50,
-        "platforms": ["google", "programmatic"],
+        "platforms": ["google"],
         "fonts": {
             "company": 18,
             "category": 12,
@@ -184,7 +184,7 @@ const adFormats = {
         "family": "rectangle",
         "width": 1200,
         "height": 628,
-        "platforms": ["facebook", "instagram", "programmatic"],
+        "platforms": ["facebook", "instagram"],
         "fonts": {
             "company": 36,
             "category": 20,
@@ -206,7 +206,7 @@ const adFormats = {
         "family": "square",
         "width": 1080,
         "height": 1080,
-        "platforms": ["facebook", "instagram", "programmatic"],
+        "platforms": ["facebook", "instagram"],
         "fonts": {
             "company": 40,
             "category": 22,
@@ -228,7 +228,7 @@ const adFormats = {
     //     "family": "social",
     //     "width": 1080,
     //     "height": 1920,
-    //     "platforms": ["facebook", "instagram", "programmatic"],
+    //     "platforms": ["facebook", "instagram"],
     //     "fonts": {
     //         "company": 48,
     //         "category": 26,
@@ -250,7 +250,7 @@ const adFormats = {
         "family": "banner",
         "width": 820,
         "height": 312,
-        "platforms": ["facebook", "programmatic"],
+        "platforms": ["facebook"],
         "fonts": {
             "company": 36,
             "category": 24,
@@ -272,7 +272,7 @@ const adFormats = {
         "family": "mobile",
         "width": 300,
         "height": 60,
-        "platforms": ["youtube", "programmatic"],
+        "platforms": ["youtube"],
         "fonts": {
             "company": 14,
             "category": 12,
@@ -294,7 +294,7 @@ const adFormats = {
         "family": "banner",
         "width": 480,
         "height": 70,
-        "platforms": ["youtube", "programmatic"],
+        "platforms": ["youtube"],
         "fonts": {
             "company": 20,
             "category": 12,
@@ -316,7 +316,7 @@ const adFormats = {
         "family": "mobile",
         "width": 320,
         "height": 100,
-        "platforms": ["google", "programmatic"],
+        "platforms": ["google"],
         "fonts": {
             "company": 22,
             "category": 12,
@@ -338,7 +338,7 @@ const adFormats = {
         "family": "banner",
         "width": 468,
         "height": 60,
-        "platforms": ["google", "programmatic"],
+        "platforms": ["google"],
         "fonts": {
             "company": 20,
             "category": 12,

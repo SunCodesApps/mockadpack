@@ -31,6 +31,16 @@ function Mock({ ad, onChange, companyFont, setCompanyFont }) {
           updateField("category", e.target.value)
         }
       />
+      
+      
+      <TextInput
+        id="website"
+        label="Website"
+        value={ad.website}
+        onChange={(e) =>
+          updateField("website", e.target.value)
+        }
+      />
 
 
       <ColorInput

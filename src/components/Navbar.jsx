@@ -4,7 +4,7 @@ import { faBoxOpen } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   return (
-    <nav className="border-b bg-white">
+    <nav className="border-b bg-black text-gray-100">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link
           to="/"
@@ -16,17 +16,17 @@ export default function Navbar() {
 
         <div className="flex gap-6">
           <Link
-            to="/"
-            className="text-gray-700 hover:text-black"
+            to="https://github.com/suncodesapps/mockadpack"
+            className="text-gray-100 hover:text-white"
           >
-            Home
+            Github
           </Link>
 
           <Link
-            to="/packs"
-            className="text-gray-700 hover:text-black"
+            to="https://github.com/suncodesapps/mockadpack/issues"
+            className="text-gray-100 hover:text-white"
           >
-            Packs
+            Contact
           </Link>
         </div>
       </div>

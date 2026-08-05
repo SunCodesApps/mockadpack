@@ -15,6 +15,10 @@ MockAdPack helps designers, developers and marketing teams quickly preview and e
 - Customizable ad content
 - Ready-to-use mockup templates
 
+## Open Source
+
+MockAdPack is an open source tool for generating ad mockups in multiple commercial formats.
+
 ## Supported Formats
 
 Examples:
@@ -76,3 +80,11 @@ Run locally:
 ```bash
 npm run dev
 ```
+
+## License
+
+This project is licensed under the MIT License.
+
+Copyright (c) 2026 Rogério Kurek
+
+See the [LICENSE](LICENSE) file for more details.
