@@ -18,9 +18,12 @@ export default function BasePage({
 }) {
   return (
     <>
-      <Helmet>
-        {title && <title>{title} | MockAdPack</title>}
-
+      <Helmet
+        titleTemplate="%s | MockAdPack"
+        defaultTitle="MockAdPack"
+      >
+        <title>{title}</title>
+        
         {description && <meta name="description" content={description} />}
 
         <meta name="robots" content={robots} />
@@ -28,7 +31,12 @@ export default function BasePage({
         <meta property="og:site_name" content="MockAdPack" />
         <meta property="og:type" content={type} />
 
-        {title && <meta property="og:title" content={title} />}
+        {title && (
+          <meta
+            property="og:title"
+            content={`${title} | MockAdPack`}
+          />
+        )}
 
         {description && (
           <meta property="og:description" content={description} />
@@ -45,7 +53,12 @@ export default function BasePage({
 
         <meta name="twitter:card" content="summary_large_image" />
 
-        {title && <meta name="twitter:title" content={title} />}
+        {title && (
+          <meta
+            name="twitter:title"
+            content={`${title} | MockAdPack`}
+          />
+        )}
 
         {description && (
           <meta name="twitter:description" content={description} />
