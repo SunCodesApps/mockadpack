@@ -18,34 +18,24 @@ export default function BasePage({
 }) {
   return (
     <>
-      <Helmet
-        titleTemplate="%s | MockAdPack"
-        defaultTitle="MockAdPack"
-      >
+      <Helmet titleTemplate="%s | MockAdPack" defaultTitle="MockAdPack">
         <title>{title}</title>
 
-        {description && (
-          <meta name="description" content={description} />
-        )}
+        {description && <meta name="description" content={description} />}
 
         <meta name="robots" content={robots} />
 
         <meta property="og:type" content={type} />
 
         {title && (
-          <meta
-            property="og:title"
-            content={`${title} | MockAdPack`}
-          />
+          <meta property="og:title" content={`${title} | MockAdPack`} />
         )}
 
         {description && (
           <meta property="og:description" content={description} />
         )}
 
-        {image && (
-          <meta property="og:image" content={image} />
-        )}
+        {image && <meta property="og:image" content={image} />}
 
         {canonical && (
           <>
@@ -55,22 +45,14 @@ export default function BasePage({
         )}
 
         {title && (
-          <meta
-            name="twitter:title"
-            content={`${title} | MockAdPack`}
-          />
+          <meta name="twitter:title" content={`${title} | MockAdPack`} />
         )}
 
         {description && (
-          <meta
-            name="twitter:description"
-            content={description}
-          />
+          <meta name="twitter:description" content={description} />
         )}
 
-        {image && (
-          <meta name="twitter:image" content={image} />
-        )}
+        {image && <meta name="twitter:image" content={image} />}
 
         {structuredData && (
           <script type="application/ld+json">
@@ -81,11 +63,15 @@ export default function BasePage({
         {extraHead}
       </Helmet>
 
-      <Navbar />
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
 
-      <Container>{children}</Container>
+        <main className="flex-1">
+          <Container>{children}</Container>
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   );
 }

@@ -15,8 +15,6 @@ export default function OgImage() {
   const [ad, setAd] = useState(defaultOgImage);
   const previewRef = useRef(null);
 
-  console.log(defaultOgImage, defaultOgImage.title);
-
   return (
     <BasePage
       title="Free Og Image Generator"
